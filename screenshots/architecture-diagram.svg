@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#182335" />
+      <stop offset="100%" stop-color="#101826" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="600" fill="url(#bgGrad)" />
+
+  <!-- Grid lines -->
+  <g stroke="#1e293b" stroke-width="1" opacity="0.3">
+    <line x1="0" y1="100" x2="1000" y2="100" />
+    <line x1="0" y1="200" x2="1000" y2="200" />
+    <line x1="0" y1="300" x2="1000" y2="300" />
+    <line x1="0" y1="400" x2="1000" y2="400" />
+    <line x1="0" y1="500" x2="1000" y2="500" />
+    <line x1="200" y1="0" x2="200" y2="600" />
+    <line x1="400" y1="0" x2="400" y2="600" />
+    <line x1="600" y1="0" x2="600" y2="600" />
+    <line x1="800" y1="0" x2="800" y2="600" />
+  </g>
+
+  <!-- Title & Header -->
+  <text x="50" y="55" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="22" font-weight="bold">MOCOMObjectForge Pro: CCSDS 521.1-B-1 Architecture</text>
+  <text x="50" y="80" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="13">Mission Operations Common Object Model (COM): Event, Archive &amp; Activity Tracking Architecture</text>
+
+  <!-- Top Layer: Mission Applications -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="110" width="900" height="70" rx="8" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1.5" />
+    <text x="70" y="140" fill="#38bdf8" font-family="-apple-system, sans-serif" font-size="14" font-weight="bold">MISSION CONTROL &amp; SCIENCE OPERATIONS APPLICATIONS</text>
+    <text x="70" y="163" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="12">Telemetry Monitoring Displays • Telecommand Sequencers • Automated Flight Procedure Runners</text>
+  </g>
+
+  <!-- Connection arrows -->
+  <g stroke="#38bdf8" stroke-width="2" stroke-dasharray="4,4" fill="none">
+    <line x1="200" y1="180" x2="200" y2="225" />
+    <line x1="500" y1="180" x2="500" y2="225" />
+    <line x1="800" y1="180" x2="800" y2="225" />
+  </g>
+
+  <!-- Middle Layer: 3 COM Services -->
+  <g filter="url(#shadow)">
+    <!-- Event Service -->
+    <rect x="50" y="225" width="280" height="155" rx="8" fill="url(#cardGrad)" stroke="#10b981" stroke-width="1.5" />
+    <rect x="65" y="240" width="30" height="30" rx="6" fill="#059669" />
+    <text x="73" y="261" fill="#fff" font-family="monospace" font-size="14" font-weight="bold">EV</text>
+    <text x="105" y="260" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="15" font-weight="bold">Event Service</text>
+    <text x="65" y="290" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">CCSDS 521.1-B-1 §3</text>
+    <text x="65" y="315" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="12">• 4-Tier Severity Gating</text>
+    <text x="65" y="335" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="12">• MAL PUB/SUB Distribution</text>
+    <text x="65" y="355" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="12">• Automatic Archive Hand-off</text>
+
+    <!-- Archive Service -->
+    <rect x="360" y="225" width="280" height="155" rx="8" fill="url(#cardGrad)" stroke="#06b6d4" stroke-width="1.5" />
+    <rect x="375" y="240" width="30" height="30" rx="6" fill="#0891b2" />
+    <text x="382" y="261" fill="#fff" font-family="monospace" font-size="14" font-weight="bold">ARC</text>
+    <text x="415" y="260" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="15" font-weight="bold">Archive Service</text>
+    <text x="375" y="290" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">CCSDS 521.1-B-1 §4</text>
+    <text x="375" y="315" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="12">• Object CRUD Persistence</text>
+    <text x="375" y="335" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="12">• Composite Temporal Queries</text>
+    <text x="375" y="355" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="12">• Retention Policy Pruning</text>
+
+    <!-- Activity Tracking Service -->
+    <rect x="670" y="225" width="280" height="155" rx="8" fill="url(#cardGrad)" stroke="#c084fc" stroke-width="1.5" />
+    <rect x="685" y="240" width="30" height="30" rx="6" fill="#7c3aed" />
+    <text x="692" y="261" fill="#fff" font-family="monospace" font-size="14" font-weight="bold">ACT</text>
+    <text x="725" y="260" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="15" font-weight="bold">Activity Tracking</text>
+    <text x="685" y="290" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">CCSDS 521.1-B-1 §5</text>
+    <text x="685" y="315" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="12">• 5-Stage Lifecycle Monitoring</text>
+    <text x="685" y="335" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="12">• Execution Duration Tracking</text>
+    <text x="685" y="355" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="12">• Sub-millisecond Precision</text>
+  </g>
+
+  <!-- Arrows -->
+  <g stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,4" fill="none">
+    <line x1="500" y1="380" x2="500" y2="425" />
+  </g>
+
+  <!-- Lower Middle: Generic Object Model Core -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="425" width="900" height="75" rx="8" fill="url(#cardGrad)" stroke="#f59e0b" stroke-width="1.5" />
+    <text x="70" y="455" fill="#fbbf24" font-family="-apple-system, sans-serif" font-size="14" font-weight="bold">GENERIC OBJECT MODEL CORE (CCSDS 521.1 §2)</text>
+    <text x="70" y="480" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="12">
+      ObjectId (Domain, Area, Service, Version, Number, InstanceId) • ObjectKey • Parent Source Provenance Links
+    </text>
+  </g>
+
+  <!-- Bottom: MAL Layer -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="520" width="900" height="55" rx="8" fill="url(#cardGrad)" stroke="#64748b" stroke-width="1.5" />
+    <text x="70" y="552" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold">CCSDS 521.0-B-2 MESSAGE ABSTRACTION LAYER (MAL)</text>
+    <text x="500" y="552" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="11">Underlying Transports: MAL-SpacePacket (524.1) • MAL-TCP (524.2) • MAL-ZMTP (524.4)</text>
+  </g>
+</svg>
